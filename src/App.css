@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+:root {
+    --background-color: #fff;
+    --secondary-background-color: #fff;
+    --primary-foreground-color: #4a4a4a;
+    --secondary-foreground-color: #000;
+    --primary-subtle-color: #04aeee;
+    --secondary-subtle-color: #f4f8fd;
+    --titles-color: #333;
+    --link-color: #122f48;
+    --primary-border-color: #9b9b9b;
+    --secondary-border-color: #f0f8ff;
+    --article-shadow-normal: 0 10px 10px rgba(0, 0, 0, 0.08);
+    --article-shadow-hover: 0 4px 60px 0 rgba(0, 0, 0, 0.2);
+    --transparent-background-color: #122f48;
+    --footer-background-color: #293951;
+    --submenu-shadow-color-opacity: 0.25;
+    --button-shadow-color-normal: hsla(0, 0%, 42.4%, 0.2);
+    --button-shadow-color-hover: hsla(0, 0%, 42.4%, 0.3);
+    --mdc-theme-primary: #4a4a4a;
+    --menu-titles-color: #ffffff;
+    --card-tag-color: #205482;
+
+    --busrides-red: #CE3F3F;
+    
+    --csps-purple: rgb(63, 42, 86);
+    --csps-grey: rgb(78, 91, 115);
+    --csps-light-grey: #EDEFF1;
+    --csps-medium-grey: #E5E7EA;
+    --csps-coral: #DA797A;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (prefers-color-scheme:dark) {
+    :root {
+        --background-color: #050e15;
+        --secondary-background-color: #1f272e;
+        --primary-foreground-color: #BCC5CE;
+        --secondary-foreground-color: #fff;
+        --primary-subtle-color: #10d0ea;
+        --secondary-subtle-color: #141920;
+        --titles-color: #BCC5CE;
+        --link-color: #5DAFD6;
+        --primary-border-color: #1d1d1d;
+        --secondary-border-color: #0f0f0f;
+        --article-shadow-normal: 0 4px 5px 5px rgba(0, 0, 0, 0.1);
+        --article-shadow-hover: 0 4px 5px 10px rgba(0, 0, 0, 0.1);
+        --transparent-background-color: #0a1b29;
+        --footer-background-color: #131a25;
+        --submenu-shadow-color-opacity: 0.55;
+        --button-shadow-color-normal: rgba(10, 10, 10, 0.5);
+        --button-shadow-color-hover: rgba(10, 10, 10, 0.5);
+        --mdc-theme-primary: #e3e3e3;
+        --card-tag-color: #5DAFD6;
+    }
 }
