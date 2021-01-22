@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Learning-Path-Card/static/css/main.65986999.chunk.css",
-    "main.js": "/Learning-Path-Card/static/js/main.1fe3864f.chunk.js",
-    "main.js.map": "/Learning-Path-Card/static/js/main.1fe3864f.chunk.js.map",
+    "main.js": "/Learning-Path-Card/static/js/main.e4220241.chunk.js",
+    "main.js.map": "/Learning-Path-Card/static/js/main.e4220241.chunk.js.map",
     "runtime-main.js": "/Learning-Path-Card/static/js/runtime-main.9c9b4bbf.js",
     "runtime-main.js.map": "/Learning-Path-Card/static/js/runtime-main.9c9b4bbf.js.map",
     "static/js/2.debb445d.chunk.js": "/Learning-Path-Card/static/js/2.debb445d.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.9c9b4bbf.js",
     "static/js/2.debb445d.chunk.js",
     "static/css/main.65986999.chunk.css",
-    "static/js/main.1fe3864f.chunk.js"
+    "static/js/main.e4220241.chunk.js"
   ]
 }
