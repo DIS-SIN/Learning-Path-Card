@@ -5,6 +5,6 @@ import './App.css';
 export default function App(props) {
 
     return (
-        <LearningPathCard cardContent={decodeURI(JSON.parse(queryString.parse(props.location.search).cardContent))}/>
+        <LearningPathCard cardContent={JSON.parse(decodeURI(queryString.parse(props.location.search).cardContent))}/>
     );
 }
