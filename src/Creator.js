@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import moment from 'moment';
 import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, TextField, InputAdornment, Button } from '@material-ui/core';
 import LearningPathCard from './LearningPathCard';
 import styles from './Creator.module.css';
@@ -15,8 +14,8 @@ export default function Creator() {
         imageAltTxt: "",
         tagTitle: "",
         tagLink: "",
-        date: Date.now(),
-        readTime: 5
+        platform: "",
+        readTime: ""
     });
     const [generatedCode, setGeneratedCode] = useState(null);
 
@@ -49,21 +48,8 @@ export default function Creator() {
                 <TextField label="Image alt text" onChange={ev => updateContent(ev, "imageAltTxt")}/>
                 <TextField label="Tag title" onChange={ev => updateContent(ev, "tagTitle")}/>
                 <TextField label="Tag link" onChange={ev => updateContent(ev, "tagLink")}/>
-                <TextField
-                    label="Content date"
-                    type="date"
-                    defaultValue={moment(Date.now()).format("YYYY-MM-DD")}
-                    onChange={ev => updateContent(ev, "date")}
-                />
-                <TextField
-                    type="number"
-                    label="Read time (minutes)"
-                    defaultValue={5}
-                    InputProps={{
-                        endAdornment: <InputAdornment position="end">minutes</InputAdornment>,
-                    }}
-                    onChange={ev => updateContent(ev, "readTime")}
-                />
+                <TextField label="Platform" onChange={ev => updateContent(ev, "platform")}/>
+                <TextField label="Read time" onChange={ev => updateContent(ev, "readTime")}/>
             </form>
             <Button variant="contained" color="primary" className={styles.button} onClick={generateCode}>Generate Code</Button>
             <LearningPathCard cardContent={cardContent}/>
