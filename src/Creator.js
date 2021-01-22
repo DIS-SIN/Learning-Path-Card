@@ -28,7 +28,7 @@ export default function Creator() {
     }
 
     function generateCode() {
-        setGeneratedCode(`<iframe style="width:100%;border:none" src="${window.location.origin}/Learning-Path-Card#/cardContent=${JSON.stringify(cardContent)}" title="${cardContent.title}"></iframe>`);
+        setGeneratedCode(`<iframe style="width:100%;border:none" src="${window.location.origin}/Learning-Path-Card/#/?cardContent=${encodeURI(JSON.stringify(cardContent))}" title="${cardContent.title}"></iframe>`);
     }
 
     return (
