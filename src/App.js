@@ -1,10 +1,10 @@
+import queryString from 'query-string';
 import LearningPathCard from './LearningPathCard';
 import './App.css';
 
-function App() {
-  return (
-    <LearningPathCard/>
-  );
-}
+export default function App(props) {
 
-export default App;
+    return (
+        <LearningPathCard cardContent={JSON.parse(queryString.parse(props.location.search).cardContent)}/>
+    );
+}

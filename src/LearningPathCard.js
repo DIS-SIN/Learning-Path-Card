@@ -1,19 +1,37 @@
+import moment from 'moment';
+import 'moment/locale/fr';
 import styles from './LearningPathCard.module.css';
 
-export default function LearningPathCard() {
+export default function LearningPathCard(props) {
+
+    function getTimeFromNow() {
+        moment.locale(props.cardContent.language);
+        return moment(props.cardContent.date).fromNow();
+    }
+
+    function getReadTime() {
+        if (props.cardContent.language === "fr"){
+            return `Lecture de ${props.cardContent.readTime} min`;
+        }
+        return `${props.cardContent.readTime} min read`;
+        
+    }
+
     return (
-        <div class={styles.card}>
-            <img class={styles.image} src="https://busrides.ghost.io/content/images/2019/11/table-1561597_1920.jpg" alt="Part 2: Remote Team Recipes"/>
-            <div class={styles.content}>
-                <div class={styles.topContent}>
-                    <a class={styles.tag} href="/tag/en-technology">Technology</a>
-                    <p class={styles.timeStamps}>a year ago<span>•</span>6 min read</p>
-                </div>
-                <div class={styles.bottomContent}>
-                    <h2 class={styles.title}>Part 2: Remote Team Recipes</h2>
-                    <p class={styles.description}>Who is moving the remote work needle in the GC and how? Plus, 4 ways you can spark the change at your workplace today. </p>
+        <a className={styles.link} href={props.cardContent.link} target="_blank">
+            <div className={styles.card}>
+                <img className={styles.image} src={props.cardContent.imageLink} alt={props.cardContent.imageAltTxt}/>
+                <div className={styles.content}>
+                    <div className={styles.topContent}>
+                        <a className={styles.tag} href={props.cardContent.tagLink}>{props.cardContent.tagTitle}</a>
+                        <p className={styles.timeStamps}>{getTimeFromNow()}<span>•</span>{getReadTime()}</p>
+                    </div>
+                    <div className={styles.bottomContent}>
+                        <h2 className={styles.title}>{props.cardContent.title}</h2>
+                        <p className={styles.description}>{props.cardContent.description}</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
     );
 }
