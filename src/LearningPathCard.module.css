@@ -69,10 +69,6 @@
     text-overflow: ellipsis;
 }
 
-.tag:hover {
-    text-decoration: underline;
-}
-
 .title {
     color: var(--titles-color);
     letter-spacing: 0.4px;

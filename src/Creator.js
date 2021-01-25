@@ -13,7 +13,6 @@ export default function Creator() {
         imageLink: "",
         imageAltTxt: "",
         tagTitle: "",
-        tagLink: "",
         platform: "",
         readTime: ""
     });
@@ -47,7 +46,6 @@ export default function Creator() {
                 <TextField type="url" label="Image link" onChange={ev => updateContent(ev, "imageLink")}/>
                 <TextField label="Image alt text" onChange={ev => updateContent(ev, "imageAltTxt")}/>
                 <TextField label="Tag title" onChange={ev => updateContent(ev, "tagTitle")}/>
-                <TextField label="Tag link" onChange={ev => updateContent(ev, "tagLink")}/>
                 <TextField label="Platform" onChange={ev => updateContent(ev, "platform")}/>
                 <TextField label="Read time" onChange={ev => updateContent(ev, "readTime")}/>
             </form>

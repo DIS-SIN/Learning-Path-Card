@@ -8,7 +8,7 @@ export default function LearningPathCard(props) {
                 <img className={styles.image} src={props.cardContent.imageLink} alt={props.cardContent.imageAltTxt}/>
                 <div className={styles.content}>
                     <div className={styles.topContent}>
-                        <a className={styles.tag} href={props.cardContent.tagLink}>{props.cardContent.tagTitle}</a>
+                        <p className={styles.tag}>{props.cardContent.tagTitle}</p>
                         <p className={styles.timeStamps}>{props.cardContent.platform}<span>•</span>{props.cardContent.readTime}</p>
                     </div>
                     <div className={styles.bottomContent}>
