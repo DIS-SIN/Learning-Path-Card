@@ -21,7 +21,7 @@
     --card-tag-color: #205482;
 
     --busrides-red: #CE3F3F;
-    
+
     --csps-purple: rgb(63, 42, 86);
     --csps-grey: rgb(78, 91, 115);
     --csps-light-grey: #EDEFF1;
@@ -29,7 +29,12 @@
     --csps-coral: #DA797A;
 }
 
-@media (prefers-color-scheme:dark) {
+/*
+    Deactivated the dark theme for now,
+    until client decides on how we should proceed implementing it
+    for the GCWeb theme
+*/
+/* @media (prefers-color-scheme:dark) {
     :root {
         --background-color: #050e15;
         --secondary-background-color: #1f272e;
@@ -51,4 +56,4 @@
         --mdc-theme-primary: #e3e3e3;
         --card-tag-color: #5DAFD6;
     }
-}
+} */
