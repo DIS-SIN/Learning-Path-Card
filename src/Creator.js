@@ -21,12 +21,13 @@ export default function Creator() {
     function updateContent(ev, key) {
         setCardContent({
             ...cardContent,
-            [key]: ev.target.value  
+            [key]: ev.target.value
         });
     }
 
     function generateCode() {
-        setGeneratedCode(`<iframe style="width:100%;border:none" src="${window.location.origin}/Learning-Path-Card/#/?cardContent=${encodeURI(JSON.stringify(cardContent))}" title="${cardContent.title}"></iframe>`);
+        let content=encodeURIComponent(JSON.stringify(cardContent)).replaceAll(/&/ig, '%26');
+        setGeneratedCode(`<iframe style="width:100%;border:none" src="${window.location.origin}/Learning-Path-Card/#/?cardContent=${content}" title="${cardContent.title}"></iframe>`);
     }
 
     return (
